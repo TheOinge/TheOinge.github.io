@@ -2,7 +2,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #035d98;
+    background-color: #7509B3;
     display: flex; 
     flex-direction: column;
     min-height: 100vh;
@@ -18,7 +18,7 @@ header {
 }
 
 .nav {
-    background-color: #02839E;
+    background-color: #AB19FF;
     text-align: center;
     padding: 10px 0;
     margin: 0;
