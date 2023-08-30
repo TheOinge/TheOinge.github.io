@@ -13,25 +13,39 @@ body {
 header {
     background-color: #FFA14F;
     color: #fff;
-    padding: 10px 0;
+    padding: 0;
     text-align: center;
 }
 
-nav {
+.nav {
     background-color: #02839E;
     text-align: center;
     padding: 10px 0;
+    margin: 0;
+    display: flex;
 }
 
-nav a {
+
+.navlogo{
+    width: 40px;
+    height: 40px;
+    align-self: center;
+    padding-left: 20px;
+    padding-right: 5%;
+
+}
+
+.nav a {
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
     transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-    background-color: #555;
+.nav a:hover {
+    background-color: #ffa600;
+    border-radius: 40%;
+    
 }
 
 h1 {
