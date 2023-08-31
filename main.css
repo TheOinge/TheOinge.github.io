@@ -1,0 +1,10 @@
+.TheOrag {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    width: 80%;
+    height: 1000px;
+    opacity: 80%;
+    border-radius: 30px;
+}
