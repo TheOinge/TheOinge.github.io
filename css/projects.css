@@ -1,0 +1,22 @@
+
+
+.grid-container {
+    border-radius: 30px;
+    display: grid;
+    height: 400px;
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    align-content: space-evenly;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    background-color: blanchedalmond;
+    padding: 10px;
+}
+
+.grid-container > div {
+    background-color: rgba(rgb(255, 0, 0), green, blue, 0.8) ;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
