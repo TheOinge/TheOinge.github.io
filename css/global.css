@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #7509B3; */
+    background-color: rgb(77, 77, 77);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    /* background-color: #AB19FF; */
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    display: flex;
+}
+
+.logo{
+    padding: 0;
+    margin: auto 0 auto 0;
+}
+
+.navbar{
+    display: flex;
+    background-color: rgb(125, 125, 125);
+}
+
+
+
+.navlogo{
+    width: 40px;
+    height: 40px;
+    align-self: center;
+
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: #ffa600;
+    border-radius: 40%;
+    animation: .3s linear;
+    color: #4d9c33;
+
+}
