@@ -7,4 +7,6 @@
     height: 1000px;
     opacity: 80%;
     border-radius: 30px;
+    border-style: solid;
+    border-color: aliceblue;
 }
