@@ -14,9 +14,21 @@
     padding: 10px;
 }
 
+.list_background {
+    border-radius: 30px;
+}
+
 .grid-container > div {
     background-color: rgba(rgb(255, 0, 0), green, blue, 0.8) ;
     text-align: center;
     padding: 20px 0;
     font-size: 30px;
+}
+
+.proj_links {
+    transition: all 0.3s ease 0s;
+}
+
+.proj_links:hover {
+    color: orange;
 }
