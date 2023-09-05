@@ -1,32 +1,58 @@
-.grid-container {
-    border-radius: 30px;
-    display: grid;
-    height: 400px;
-    width: 70%;
-    margin: auto;
-    margin-top: 50px;
-    align-content: space-evenly;
-    grid-template-columns: auto auto;
-    gap: 10px;
-    background-color: blanchedalmond;
-    padding: 10px;
-}
-
-
-
-.grid-container > div {
-    background-color: rgba(rgb(255, 0, 0), green, blue, 0.8) ;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 30px;
-    border-radius: 30px;
-
-}
-
 .proj_links {
     transition: all 0.3s ease 0s;
+    color: blueviolet;
+    background-color: blanchedalmond;
+    
 }
 
 .proj_links:hover {
     color: orange;
+}
+.link_background {
+    background-color: blanchedalmond;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.progress-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.in-progress, .complete {
+    flex-basis: 48%;
+    background-color: blanchedalmond;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 18px;
+    color: blueviolet;
+    background-color: blanchedalmond;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+.complete {
+    text-align: center;
+}
+
+.in-progress {
+    text-align: center;
 }
