@@ -1,17 +1,46 @@
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th, td {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-
-th {
-    background-color: #7b7b7b;
-}
 body {
-    color: #dddddd;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.content {
+    display: flex;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    color: darkslategrey;
+}
+
+.netID {
+    text-align: center;
+    background-color: yellow;
+}
+
+
+.important_day {
+    color: #e0f6ef;
+    background-color: #6ab099;
+}
+
+.container {
+    border : 2px solid black;
+    margin: auto;
+    width: 40%;
+    height: 900px;
+    text-align: center;   
+    vertical-align: middle;
+}
+
+.interests {
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    border: 2px black solid;
+}
+
+.slidecontainer {
+    margin-top: 20px;
 }

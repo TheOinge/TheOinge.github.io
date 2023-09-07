@@ -19,7 +19,8 @@ body {
 .progress-list {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10% 15%;
+    min-width: 70%;
 }
 
 .in-progress, .complete {
