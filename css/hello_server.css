@@ -4,8 +4,24 @@ body {
     font-family: sans-serif;
 }
 
+.important_links {
+    margin-left: 60px;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+th, td {
+    padding: 0;
+    border: 1px solid black;
+}
+
 .content {
     display: flex;
+    margin: 20px auto 20px auto;
 }
 
 h1 {
@@ -34,8 +50,17 @@ h1 {
     vertical-align: middle;
 }
 
+.send {
+    margin-top: 10px;
+}
+
+li {
+    list-style: none;
+}
+
 .interests {
     margin: auto;
+    margin-bottom: 10px;
     width: 300px;
     height: 300px;
     border: 2px black solid;
@@ -43,4 +68,43 @@ h1 {
 
 .slidecontainer {
     margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25%;
+    height: 10px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;    
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #04AA6D;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px; 
+    background: #04AA6D;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
