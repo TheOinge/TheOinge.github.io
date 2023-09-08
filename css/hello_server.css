@@ -21,7 +21,8 @@ th, td {
 
 .content {
     display: flex;
-    margin: 20px auto 20px auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 h1 {
@@ -43,11 +44,23 @@ h1 {
 
 .container {
     border : 2px solid black;
+
+    width: calc(40% - 10px);
+    margin-bottom: 10px;
+    min-width: 410px;
+    max-width: 500px;
+    padding: 5px;
+    box-sizing: border-box;
     margin: auto;
-    width: 40%;
-    height: 900px;
     text-align: center;   
     vertical-align: middle;
+    height: 900px;
+ }
+
+ @media (max-width: 600px) { /* trying out a media query */
+    .container {
+        width: 100%;
+    }
 }
 
 .send {
@@ -61,8 +74,10 @@ li {
 .interests {
     margin: auto;
     margin-bottom: 10px;
-    width: 300px;
-    height: 300px;
+    width: 40%;
+    min-width: 200px;
+    height: 30%;
+    min-height: 200px;
     border: 2px black solid;
 }
 
