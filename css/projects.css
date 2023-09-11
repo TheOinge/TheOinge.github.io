@@ -2,12 +2,12 @@
     transition: all 0.3s ease 0s;
     color: blueviolet;
     background-color: blanchedalmond;
-    
 }
 
 .proj_links:hover {
     color: orange;
 }
+
 .link_background {
     background-color: blanchedalmond;
 }
@@ -56,4 +56,8 @@ ul li a {
 
 .in-progress {
     text-align: center;
+}
+
+.proj_buttons {
+    margin-bottom: 10px;
 }

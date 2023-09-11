@@ -122,12 +122,10 @@ img {
     height: 100%;
     object-fit: cover;
     transition: all 0.3s ease 0s;
-    
 }
 
 img:hover {
     cursor: pointer;
-
 }
 
 
@@ -142,7 +140,7 @@ img:hover {
     height: auto;
   } */
   
-  .overlay {
+.overlay {
     position: absolute;
     bottom: 100%;
     left: 0;
@@ -154,12 +152,12 @@ img:hover {
     transition: .5s ease;
   }
   
-  .interests:hover .overlay {
+.interests:hover .overlay {
     bottom: 0;
     height: 100%;
   }
   
-  .text {
+.text {
     color: white;
     font-size: 20px;
     position: absolute;
