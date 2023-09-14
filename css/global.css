@@ -1,37 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
-* { 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #24252A;
-    
-}
-
-li, a, button {
-
-    font-family: "Monterrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: white;
-    text-decoration: none;
+  background-color: #24252a;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  min-height: 100vh;
 }
 
 header {
-    display:  flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
-}
-
-body {
-	font-family: 'Montserrat', sans-serif;
-	line-height: 1.6;
-	margin: 0;
-	min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: #333; /* Add your desired background color */
 }
 
 ul {
@@ -40,128 +28,87 @@ ul {
   list-style: none;
 }
 
-
 a {
-	text-decoration: none;
+  text-decoration: none;
+  color: white;
 }
 
 .logo {
-	margin: 0;
-	font-size: 1.45em;
+  margin: 0;
+  font-size: 1.45em;
+  order: 1; /* Move the logo to the top in the flex layout */
 }
 
 .main-nav {
-	margin-top: 5px;
-
-}
-.logo a,
-.main-nav a {
-	padding: 10px 15px;
-	text-transform: uppercase;
-	text-align: center;
-	display: block;
+  margin-top: 5px;
+  order: 2; /* Move the links below the logo in the flex layout */
+  text-align: center; /* Center-align the links */
 }
 
 .main-nav a {
-	font-size: .99em;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  display: block;
+  font-size: 0.99em;
 }
 
 .main-nav a:hover {
-	color: orange;
+  color: orange;
 }
 
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center-align items */
+  }
 
-
-.header {
-	padding-top: .5em;
-	padding-bottom: .5em;
-	border: 1px solid #a2a2a2;
-	background-color: #f4f4f4;
-	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
+  .main-nav {
+    margin-top: 20px; /* Add space between logo and links */
+  }
 }
 
-
-/* ================================= 
-  Media Queries
-==================================== */
-
-
-
-
-@media (min-width: 769px) {
-	.header,
+@media (min-width: 768px) {
+	header {
+	  flex-direction: row;
+	  justify-content: space-between;
+	}
+  
 	.main-nav {
-		display: flex;
+	  margin-top: 0; /* Reset margin between logo and links */
+	  display: flex; /* Display the links in a horizontal line */
 	}
-	.header {
-		flex-direction: column;
-		align-items: center;
-    	.header{
-		width: 80%;
-		margin: 0 auto;
-		max-width: 1150px;
+  
+	.main-nav li {
+	  margin-right: 20px; /* Adjust spacing between links */
 	}
+  
+	.main-nav a {
+	  padding: 10px 15px; /* Adjust padding for wide screens */
+	  font-size: 0.99em; /* Reset font size to the original value */
 	}
+  
+	/* Add any additional styles for wide screens here */
+  }
 
-}
-
-@media (min-width: 1025px) {
-	.header {
-		flex-direction: row;
-		justify-content: space-between;
-	}
-
-}
 .navlogo {
-    justify-self: center;
-    vertical-align: middle;
-    width: 7%;
-    min-width: 30px;
-    min-height: 30px;
-    height: 7%;
-    cursor: pointer;
+  justify-self: center;
+  vertical-align: middle;
+  width: 7%;
+  min-width: 30px;
+  min-height: 30px;
+  height: 7%;
+  cursor: pointer;
 }
-
-/* test nav  */
-
-/* .navlogo {
-
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-}
-
-.nav__links {
-    list-style: none;
-}
-
-.nav__links li {
-    display:  inline-block;
-    padding: 0px 20px;
-}
-
-.nav__links li a{
-    transition: all 0.3s ease 0s;
-}
-
-.nav__links li a:hover{
- color: orange;
-} */
 
 button {
-    padding: 9px 25px;
-    background-color: rgb(235, 141, 0);
-    border-radius: 50px;
-    border-style: solid;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
+  padding: 9px 25px;
+  background-color: rgb(235, 141, 0);
+  border-radius: 50px;
+  border-style: solid;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
 }
 
-button:hover{
-    background-color: rgba(255, 153, 0, 0.8);
+button:hover {
+  background-color: rgba(255, 153, 0, 0.8);
 }
