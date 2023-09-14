@@ -2,11 +2,32 @@
     display: block;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 50px;
-    width: 80%;
-    height: 1000px;
+    margin-top: 20px;
+    width: 70%;
+    height: 70%;
     opacity: 80%;
     border-radius: 30px;
     border-style: solid;
     border-color: aliceblue;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.image-container {
+    position: relative;
+    top: 100vh; /* Initially, place the image below the viewport */
+    animation: slideUp 1.3s ease-in-out forwards; /* Apply the animation */
+}
+
+@keyframes slideUp {
+    0% {
+        top: 100vh; /* Start position: below the viewport */
+    }
+    100% {
+        top: 0; /* End position: at the top of the viewport */
+    }
 }
