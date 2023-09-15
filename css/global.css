@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #24252a;
+  background-color: #41424b;
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   margin: 0;
@@ -19,7 +19,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 30px 10%;
-  background-color: #333; /* Add your desired background color */
+  background-color: #767676; /* Add your desired background color */
 }
 
 ul {

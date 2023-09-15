@@ -1,15 +1,38 @@
-.TheOrag {
-  display: block;
+.Random-City {
+  position: relative;
+  transition: all 0.3s ease 0s;
   margin-right: auto;
   margin-left: auto;
   margin-top: 20px;
-  width: 100%;
+  width: 70%;
   height: 70%;
   opacity: 80%;
   border-radius: 3px;
   min-height: 300px;
   border-style: solid;
   border-color: aliceblue;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.Random-City:hover {
+  opacity: .7;
+}
+
+.TheOrag {
+  position: absolute;
+  transition: all 0.3s ease 0s;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  width: 70%;
+  height: 96%;
+  opacity: 80%;
+  border-radius: 3px;
+  min-height: 300px;
+  opacity: 0;
+}
+.TheOrag:hover {
+  opacity: .1;
 }
 
 body {
@@ -20,8 +43,11 @@ body {
 
 .image-container {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   top: 100vh; /* Initially, place the image below the viewport */
-  animation: slideUp 1.3s ease-in-out forwards; /* Apply the animation */
+  animation: slideUp 1.7s ease-in-out forwards; /* Apply the animation */
 }
 
 @keyframes slideUp {

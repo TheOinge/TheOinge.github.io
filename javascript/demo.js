@@ -6,3 +6,5 @@
 // console.log("Hello" + name)
 
 // console.log(doubleIt(4))
+
+// onkeyup method in the inputs 
