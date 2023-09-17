@@ -3,8 +3,9 @@ function isStrongPassword(password) {
       return false;
   }
 
-  if (password.toLowerCase().includes("password")) { // password is not a password
-      return false;
+  if (password.indexOf("password") != -1) { // password is not a password
+    //   console.log("password in password detected")
+        return false;
   }
 
   let hasDigit = false;
