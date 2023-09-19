@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work on 9-18-2023</title>
+</head>
+<body>
+    <input type="number" id="v1">
+    <input type="number" id="v2">
+    <div id="out"></div>
+    <button onclick="calc(add)">Add</button>
+    <button onclick="calc(sub)">Subtract</button>
+    <button onclick="calc(mult)">Multiply</button>
+    
+
+    <script>
+
+        function calc(callback) {
+            let a = parseFloat(document.getElementById("v1").value)
+            let b = parseFloat(document.getElementById("v2").value)
+            const out = document.getElementById("out")
+            result = callback(a, b)
+            out.innerHTML = result
+        }
+
+        function add(a, b){
+            return a + b
+        }
+
+        function sub(a, b) {
+            return a - b
+        }
+
+        function mult(a, b) {
+            return a * b
+        }
+    </script>
+</body>
+</html>
