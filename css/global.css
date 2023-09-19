@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #41424b;
+  background-color: #28272B;
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   margin: 0;
@@ -19,7 +19,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 30px 10%;
-  background-color: #767676; /* Add your desired background color */
+  background-color: #1E3B29; /* Add your desired background color */
 }
 
 ul {
@@ -100,15 +100,3 @@ a {
   cursor: pointer;
 }
 
-button {
-  padding: 9px 25px;
-  background-color: rgb(235, 141, 0);
-  border-radius: 50px;
-  border-style: solid;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
-
-button:hover {
-  background-color: rgba(255, 153, 0, 0.8);
-}

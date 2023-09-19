@@ -1,16 +1,23 @@
-.proj_links {
-    transition: all 0.3s ease 0s;
-    color: blueviolet;
-    background-color: blanchedalmond;
+.proj_buttons {
+    background-color: transparent;
+    border: 2px solid #ffae00; /* Neon green border */
+    color: #ffae00; /* Neon green text color */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 10px;
 }
 
-.proj_links:hover {
-    color: orange;
+.proj_buttons:hover {
+    background-color: #FF955D; /* Neon green background on hover */
+    box-shadow: 0 0 10px #FF955D, 0 0 20px #FF955D, 0 0 30px #FF955D; /* Neon glow effect */
+    color: #000; /* Change text color on hover for visibility */
 }
 
-.link_background {
+/* .link_background {
     background-color: blanchedalmond;
-}
+} */
 
 body {
     font-family: Arial, sans-serif;
@@ -18,23 +25,38 @@ body {
 
 .progress-list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center; /* Changed to center the divs horizontally */
     padding: 10% 15%;
-    min-width: 70%;
 }
 
 .in-progress, .complete {
     flex-basis: 48%;
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
     border-radius: 30px;
     padding: 10px;
 }
 
-h2 {
-    font-size: 18px;
-    color: blueviolet;
-    background-color: blanchedalmond;
-    margin-bottom: 10px;
+.context {
+    color: #D1CAC3; /* Neon green text color */
+    font-size: 36px; /* Adjust font size as needed */
+    text-align: center; /* Center-align text */
+    
+    margin: 20px;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .5; 
+    }
+}
+
+.context:hover {
+    text-shadow: 0 0 10px #D1CAC3, 0 0 20px #D1CAC3, 0 0 30px #D1CAC3;
+    animation: flicker 1s infinite ease-out;
 }
 
 ul {
