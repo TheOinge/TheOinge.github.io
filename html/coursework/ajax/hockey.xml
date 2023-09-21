@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--open this XML file in a browswer-->
+<hockey>
+    <team>
+        <name>Puck Ups</name>
+        <score>12</score>
+    </team>
+    <br />
+    <team>
+        <name>Vipers</name>
+        <score>1</score>
+    </team>
+    <team>
+        <name>Pony Bar</name>
+        <score>287</score>
+    </team>
+</hockey>

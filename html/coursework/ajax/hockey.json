@@ -1,0 +1,24 @@
+{
+    "hockey": [
+        {
+            "team": "Puckups",
+            "score": "12"
+            },
+        {
+            "team": "Vipers",
+            "score": "1"
+            },
+        {
+            "team": "Pony Bar",
+            "score": "287"
+            },
+        {
+            "team": "Red Wings",
+            "score": "7890"
+            },
+        {
+            "team": "Blackhawks",
+            "score": "1234"
+            }
+    ]
+}

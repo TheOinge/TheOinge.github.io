@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>AJAX Example</title>
+    <style>
+        table,
+        table * {
+            border: 1px solid gray
+        }
+        td {
+            padding: 0 10px;
+        }
+
+    </style>
+    <script src="hockey_ajax_json.js" defer></script>
+</head>
+
+<body>
+    <p>Here is content...</p>
+    <table>
+        <tr>
+            <th>Team</th>
+            <th>Score</th>
+        </tr>
+        <tbody id="scoreboard">
+            <!-- ajax script fills this -->
+        </tbody>
+
+
+    </table>
+</body>
+
+</html>
