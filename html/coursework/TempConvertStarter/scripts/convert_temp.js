@@ -13,7 +13,7 @@ function domLoaded() {
    // execute after that event does happen. 
    // You don't send arguments to the event handler function.
    // So, if you want the event handler to call another function that
-   // DOES take arguments, you can send that other function as a callback.
+   // DOES take arguments, you can send that other function as a callback. 
    // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#event_listener_with_anonymous_function
    // Here is an example of anonymous event handler fn that calls alert with an argument:
    // document.getElementById("weatherIcon").addEventListener("click", function() {alert("You clicked the icon.")})
