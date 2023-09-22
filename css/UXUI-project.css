@@ -4,7 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     color: #C2C4C3;
-    margin-top: 3%;
+    margin-top: 4%;
 }
 
 img {
@@ -15,8 +15,8 @@ img {
 }
 .map {
     margin-bottom: 20px;
-    padding-top: 30px;
-    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
     vertical-align: middle;
     display: flex;
     flex-wrap: wrap;
@@ -48,6 +48,26 @@ img {
     width: 80%;
 }
 
-h2 {
+.name {
     font-size: 150%;
+}
+
+h1 {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.conclusion-head {
+    margin-bottom: 20px;
+}
+
+.conclusion {
+    box-sizing: border-box;
+    text-align: center;
+    width: 70%;
+    margin: 30px;  
+}
+
+span {
+    width: 100%;
 }
