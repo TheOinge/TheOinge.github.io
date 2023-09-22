@@ -1,4 +1,7 @@
 .container {
+    position: relative;
+    top: 100vh;
+    animation: slideUp 1.2s ease-in-out forwards;
     justify-content: center;
     font-family: Helvetica, Arial, sans-serif;
     display: flex;
@@ -52,12 +55,28 @@ img {
     font-size: 150%;
 }
 
+.empathize-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
 h1 {
-    margin-bottom: 70px;
     text-align: center;
     font-size: 32pt;
     width: 100%;
+    
 }
+
+@keyframes slideUp {
+    0% {
+      top: 100vh; /* Start position: below the viewport */
+    }
+    100% {
+      top: 0; /* End position: at the top of the viewport */
+    }
+  }
 
 .conclusion-head {
     margin-bottom: 20px;
