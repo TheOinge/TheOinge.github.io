@@ -53,21 +53,34 @@ img {
 }
 
 h1 {
-    margin-bottom: 20px;
+    margin-bottom: 70px;
+    text-align: center;
+    font-size: 32pt;
     width: 100%;
 }
 
 .conclusion-head {
     margin-bottom: 20px;
+    font-size: 22pt;
 }
 
 .conclusion {
     box-sizing: border-box;
-    text-align: center;
     width: 70%;
     margin: 30px;  
 }
 
 span {
     width: 100%;
+}
+
+.survey-container {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.survey {
+    list-style: circle;
+    margin-bottom: 15px;
 }
