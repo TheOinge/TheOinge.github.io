@@ -80,6 +80,7 @@ img {
     top: 100vh;
     animation: slideUp 1.3s ease-in-out forwards;
     margin-bottom: 100px;
+    width: 100%;
 }
 
 .creator-names {

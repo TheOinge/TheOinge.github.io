@@ -21,12 +21,12 @@ function domLoaded() {
    const cInput = document.getElementById("C_in");
 
    fInput.addEventListener("input", function() {
-      cInput.value = ""; // Clear the °F input when °C input changes.
+      cInput.value = "";
     });
 
    cInput.addEventListener("input", function() {
       fInput.value = "";
-   });
+   });  
 
 }
 // TODO: (Part of the above is to write the functions to be executed when the event handlers are invoked.)
