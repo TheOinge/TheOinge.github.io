@@ -1,27 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Form Data Response</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Viewer</title>
+    <link rel="stylesheet" href="../../css/form.css">
 </head>
 <body>
-    <h1>Form Data Response</h1>
+    <h1>Form Data Viewer</h1>
     <table>
         <tr>
             <th>Field</th>
             <th>Value(s)</th>
         </tr>
         <?php
-        if ($_SERVER["REQUEST_METHOD"] === "POST" || $_SERVER["REQUEST_METHOD"] === "GET") {
-            foreach ($_REQUEST as $field => $value) {
-                echo "<tr>";
-                echo "<td>$field</td>";
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            foreach ($_POST as $key => $value) {
                 if (is_array($value)) {
-                    echo "<td>" . implode(", ", $value) . "</td>";
-                } else {
-                    echo "<td>$value</td>";
+                    $value = implode(', ', $value);
                 }
-                echo "</tr>";
+                echo "<tr><td>$key</td><td>$value</td></tr>";
             }
         }
         ?>

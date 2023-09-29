@@ -1,57 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Gathering Form</title>
-    <link rel="stylesheet" type="text/css" href="../../css/form.css">
+    <link rel="stylesheet" href="../../css/form.css">
 </head>
 <body>
     <h1>Data Gathering Form</h1>
-    <form action="https://theoinge.github.io/html/coursework/data_gathering.html" method="post">
-        <!-- Checkbox inputs -->
-        <fieldset>
-            <legend>Checkbox Choices</legend>
-            <label for="checkbox1">
-                <input type="checkbox" id="checkbox1" name="checkboxes[]" value="Option 1"> Option 1
-            </label>
-            <label for="checkbox2">
-                <input type="checkbox" id="checkbox2" name="checkboxes[]" value="Option 2"> Option 2
-            </label>
-            <label for="checkbox3">
-                <input type="checkbox" id="checkbox3" name="checkboxes[]" value="Option 3"> Option 3
-            </label>
-        </fieldset>
+    <form action="form_viewer.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
 
-        <!-- Radio inputs -->
-        <fieldset>
-            <legend>Radio Choices</legend>
-            <label for="radio1">
-                <input type="radio" id="radio1" name="radio" value="Radio Option 1"> Radio Option 1
-            </label>
-            <label for="radio2">
-                <input type="radio" id="radio2" name="radio" value="Radio Option 2"> Radio Option 2
-            </label>
-            <label for="radio3">
-                <input type="radio" id="radio3" name="radio" value="Radio Option 3"> Radio Option 3
-            </label>
-        </fieldset>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
 
-        <!-- Select one option -->
-        <label for="selectSingle">Select One Option:</label>
-        <select id="selectSingle" name="selectSingle">
-            <option value="Option 1">Option 1</option>
-            <option value="Option 2">Option 2</option>
-            <option value="Option 3">Option 3</option>
-        </select>
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male"> <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female"> <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="Other"> <label for="other">Other</label><br><br>
 
-        <!-- Select multiple options -->
-        <label for="selectMultiple">Select Multiple Options:</label>
-        <select id="selectMultiple" name="selectMultiple[]" multiple>
-            <option value="Option 1">Option 1</option>
-            <option value="Option 2">Option 2</option>
-            <option value="Option 3">Option 3</option>
-        </select>
+        <label for="interests">Interests:</label>
+        <select id="interests" name="interests[]" multiple>
+            <option value="Sports">Sports</option>
+            <option value="Music">Music</option>
+            <option value="Books">Books</option>
+            <option value="Travel">Travel</option>
+        </select><br><br>
+
+        <label for="newsletter">Subscribe to Newsletter:</label>
+        <input type="checkbox" id="newsletter" name="newsletter" value="Yes"><br><br>
 
         <input type="submit" value="Submit">
     </form>
+    <script src="../../javascript/form.js"></script>
 </body>
 </html>
