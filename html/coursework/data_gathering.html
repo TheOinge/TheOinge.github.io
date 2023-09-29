@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Gathering Form</title>
+</head>
+<body>
+  <h1>Data Gathering Form</h1>
+  <form action="form_viewer.php" method="post">
+    <label for="checkboxes">Checkbox Options:</label><br>
+    <input type="checkbox" name="checkboxes[]" value="Option 1"> Beans<br>
+    <input type="checkbox" name="checkboxes[]" value="Option 2"> Big Beans<br>
+    <input type="checkbox" name="checkboxes[]" value="Option 3"> Beans but bigger<br><br>
+
+    <label for="radios">Radio Options:</label><br>
+    <input type="radio" name="radios" value="Option 1"> Toast<br>
+    <input type="radio" name="radios" value="Option 2"> Big Toast<br>
+    <input type="radio" name="radios" value="Option 3"> Bigger Toast<br><br>
+
+    <label for="select">Select Option:</label><br>
+    <select name="select">
+      <option value="Option 1">Toast</option>
+      <option value="Option 2">Option 2</option>
+      <option value="Option 3">Option 3</option>
+    </select><br><br>
+
+    <label for="multiple_select">Select Multiple Options:</label><br>
+    <select name="multiple_select[]" multiple>
+      <option value="Option 1">Option 1</option>
+      <option value="Option 2">Option 2</option>
+      <option value="Option 3">Option 3</option>
+    </select><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
