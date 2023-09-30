@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Newsletter Subscription</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Newsletter Subscription</h1>
+        <input id="fv" type="text" value="" placeholder="https://csci331.cs.montana.edu/~s59b726/html/coursework/php-attempt/form-processor.php">
+        <form action="form-processor.php" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="gender">Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label><br>
+            
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label><br>
+
+            <input type="radio" id="other" name="gender" value="Other">
+            <label for="other">Other</label><br><br>
+
+            <label for="time">When do you want updates?</label>
+            <select id="time" name="time">
+                <option value="Daily">Daily</option>
+                <option value="Weekly">Weekly</option>
+                <option value="Monthly">Monthly</option>
+                <option value="Yearly">Yearly</option>
+            </select><br><br>
+
+
+            <label for="interests">Interests (select multiple):</label><br>
+            <select id="interests" name="interests[]" multiple>
+                <option value="Sports">Sports</option>
+                <option value="Music">Music</option>
+                <option value="Books">Books</option>
+                <option value="Travel">Travel</option>
+            </select><br><br>
+
+            <label for="newsletter">Subscribe to Newsletter:</label><br>
+            <input type="checkbox" id="checkbox1" name="newsletter" value="Yes">
+            <label for="Money????">Give Me Money????</label><br>
+            <input type="checkbox" id="checkbox2" name="Money????" value="Yes">
+            <label for="Bonus">Bonus</label><br>
+            <input type="checkbox" id="checkbox3" name="Bonus" value="Yes"><br><br>
+
+            <input type="submit" value="Subscribe">     
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
