@@ -2,27 +2,39 @@ document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("dataForm");
     const responseDiv = document.getElementById("response");
     const responseDataTable = document.getElementById("responseData");
+    const formUrlInput = document.getElementById("form_url"); // Get the input field
 
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
+    // Check if the form element exists before adding the event listener
+    if (form) {
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
 
-        // Create an object to store form data
-        const formData = new FormData(form);
+            // Get the user-entered URL
+            const formUrl = formUrlInput.value;
 
-        // Prepare the table rows to display the data
-        let tableRows = "";
-        formData.forEach(function(value, key) {
-            // Handle arrays by joining values with commas
-            if (Array.isArray(value)) {
-                value = value.join(", ");
+            // Check if the input is a valid URL
+            if (isValidURL(formUrl)) {
+                // Set the form's action attribute to the user's URL
+                form.action = formUrl;
+
+                // Programmatically submit the form to the new URL
+                form.submit();
+
+                // You can optionally hide the response div or perform other actions here
+                responseDiv.style.display = "none"; // Hide the response div
+            } else {
+                alert("Please enter a valid URL.");
             }
-            tableRows += `<tr><td>${key}</td><td>${value}</td></tr>`;
         });
+    }
 
-        // Display the response data in the table
-        responseDataTable.innerHTML = tableRows;
-
-        // Show the response div
-        responseDiv.style.display = "block";
-    });
+    // Function to validate a URL
+    function isValidURL(url) {
+        try {
+            new URL(url);
+            return true;
+        } catch (error) {
+            return false;
+        }
+    }
 });
