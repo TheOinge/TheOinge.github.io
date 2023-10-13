@@ -1,4 +1,4 @@
-let url = "https://randomuser.me/api"
+const url = "https://randomuser.me/api"
 const getBtn = document.getElementById("getBtn")
 const apiData = document.getElementById("apiData")
 
