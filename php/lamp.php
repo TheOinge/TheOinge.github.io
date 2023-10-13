@@ -43,8 +43,6 @@
                 }
                 mysqli_close($conn);
             }
-
-            //  // Display past submissions in a table
                 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
                 if (!$conn) {
