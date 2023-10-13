@@ -7,7 +7,7 @@
     <title>Lamp</title>
 </head>
 <body>
-    <h1>LAMP</h1>
+    <h1>LAMP Stack</h1>
 
     <div id="apiData">
         <!-- api data will go here -->
@@ -15,9 +15,17 @@
 
     <button id="getBtn">Get a random user</button>
 
-    <form action="../php/lamp.php" method="get">
-        <input type="submit" value="Submit">
+    <form action="../php/lamp.php" method="POST">
+        <input type="hidden" name="first" id="apiFirst" value="">
+        <input type="hidden" name="last" value="">
+        <input type="hidden" name="country" value="">
+        <input type="hidden" name="age" value="">
+        <input type="submit" id="addBtn" class="btn" value="Add This One">
     </form>
+    
+    
+    
+    
 
 
     <script src="../javascript/lamp.js"></script>
