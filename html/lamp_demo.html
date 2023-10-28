@@ -16,11 +16,11 @@
 
         <button id="getBtn">Get a random user</button>
 
-        <form action="../php/lamp.php" method="POST">
+        <form action="../php/lamp.php" method="GET">
             <input type="hidden" name="first" id="apiFirst" value="">
-            <input type="hidden" name="last" value="">
-            <input type="hidden" name="country" value="">
-            <input type="hidden" name="age" value="">
+            <input type="hidden" name="last" id="apiLast" value="">
+            <input type="hidden" name="country" id="apiCountry" value="">
+            <input type="hidden" name="age" id="apiAge" value="">
             <input type="submit" id="addBtn" class="btn" value="Add This One">
         </form>
     </div>

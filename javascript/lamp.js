@@ -24,17 +24,26 @@ function decodeData(response){
 }
 
 function success(userData) {
-    const apiFirst = userData.results[0].name.first;
-    const apiLast = userData.results[0].name.last;
-    const apiCountry = userData.results[0].location.country;
-    const apiAge = userData.results[0].dob.age;
-    // console.log(apiFirst)
-    // console.log(apiLast)
-    // console.log(apiCountry)
-    // console.log(apiAge)
+    let apiFirst = userData.results[0].name.first;
+    let apiLast = userData.results[0].name.last;
+    let apiCountry = userData.results[0].location.country;
+    let apiAge = userData.results[0].dob.age;
+    console.log(apiFirst)
+    console.log(apiLast)
+    console.log(apiCountry)
+    console.log(apiAge)
 
     const apiFirstInput = document.getElementById("apiFirst");
     apiFirstInput.value = apiFirst;
+
+    const apiLastInput = document.getElementById("apiLast");
+    apiLastInput.value = apiLast;
+
+    const apiCountryInput = document.getElementById("apiCountry");
+    apiCountryInput.value = apiCountry;
+
+    const apiAgeInput = document.getElementById("apiAge");
+    apiAgeInput.value = apiAge;
 
     // Update the value of the existing input fields
     const addBtn = document.getElementById("addBtn");
@@ -47,9 +56,9 @@ function success(userData) {
     `;
 
     // Update hidden form fields for last name, country, and age
-    document.querySelector("input[name='last']").value = apiLast;
-    document.querySelector("input[name='country']").value = apiCountry;
-    document.querySelector("input[name='age']").value = apiAge;
+    // document.querySelector("input[name='last']").value = apiLast;
+    // document.querySelector("input[name='country']").value = apiCountry;
+    // document.querySelector("input[name='age']").value = apiAge;
 }
 
 
