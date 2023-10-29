@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <script src="js.js" defer></script>
+    <title>Rsponsive Thing</title>
+</head>
+<body>
+    <div class="content">
+        <div>
+            <nav>
+                <ul class="menu">
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 2</a></li>
+                  <li><a href="#">Item 3</a></li>
+                  <li><a href="#">Item 4</a></li>
+                  <li><a href="#">Item 5</a></li>
+                </ul>
+              </nav>
+        </div>
+        <div>
+            <img srcset="images/machine640w.jpg 640w, images/machine1280w.jpg 1280w" sizes="(max-width: 600px) 100vw, 50vw" alt="Responsive Image" class="responsive-image" />
+        </div>
+        <div class="calc">
+            <form id="calculator">
+                <div class="calcInputs">
+                  <input type="number" id="num1" />
+                  <span id="operation-display"></span>
+                  <input type="number" id="num2" />
+                  <span class="bruh">=</span>
+                  <span class="bruh" id="result"></span>
+                </div>
+                <div class="operation-buttons">
+                  <button id="add">+</button>
+                  <button id="subtract">-</button>
+                  <button id="multiply">×</button>
+                  <button id="divide">÷</button>
+                  <button id="less-than" class="mobile-hide">≤</button>
+                  <button id="greater-than" class="mobile-hide">≥</button>
+                </div>
+              </form>
+                                       
+        </div>
+    </div>
+</body>
+</html>
