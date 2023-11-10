@@ -118,7 +118,7 @@ header {
 }
 
 .creator-names {
-    font-size: 10pt;
+    font-size: 15pt;
     color: #777777;;
 }
 
@@ -161,7 +161,11 @@ span {
 .survey {
     list-style: inside;
     margin-bottom: 15px;
-    font-size: 10pt;
+    font-size: 13pt;
+}
+
+p {
+    font-size: 13px;
 }
 
 .stage-2 {
