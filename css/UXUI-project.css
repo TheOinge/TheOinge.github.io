@@ -33,7 +33,6 @@ header {
 
 .map {
    
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -43,9 +42,26 @@ header {
     justify-content: center;
     width: 90%;
     height: 40%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     background-color: #007564;
     border-radius: 50px;
     
+}
+
+.map-text {
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    vertical-align: middle;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+    height: 40%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: #007564;
+    border-radius: 50px;
+
 }
 
 .image-2 {
@@ -158,4 +174,5 @@ span {
 .define-div {
     margin-top: 100px;
     margin-bottom: 100px;
+    width: 100%;
 }
