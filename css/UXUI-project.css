@@ -198,3 +198,19 @@ p {
     margin-top: 20px;
     font-size: 15pt;
 }
+
+.image-grid {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+}
+
+.image-grid img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto; /* This will center the image horizontally */
+}
