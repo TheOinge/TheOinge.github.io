@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UXUI Project</title>
-    <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/UXUI-project.css">
+    <link rel="stylesheet" href="../css/prism.css">
+    <link rel="stylesheet" href="../css/global.css">
+    
 </head>
 <body>
     <header>
@@ -429,14 +431,298 @@
             <div class="big"><h2 class="name">Statistical Evaluation:</h2></div>
             <img class="big" src="../images/UXUI-Images/Means.png" alt="means">
             <div class="conclusion">
-                <p></p>
+                <p>These images represent the same information mentioned up above. However, the mean values of the data as well
+                    as the standard deviations are now displayed. We can see that on average 7 was the easiness score, 140 seconds was the time, 51 was the amount of clicks,
+                    and 4.5 was the value for total errors. 
+                </p>
+                <br>
+                <p>
+                  We found that there might be a correlation between some of the data collected, however, more statistical tests must be done before that conclusion is settled.
+                  We hypothesize that users what averaged a higher amount of clicks and errors might rate the app as more difficult, compared with users that averaged lower values.
+                  Minimizing the amount of steps and clicks that it takes to navigate though the pages and setting should be one the higher priority changes the we follow through with.
+                  We also found that here is a large deviation of times and errors when compared to the mean values of those categories. Some users ran into significantly less errors compared
+                  to others, which may have influenced their difficulty score. The same conclusion could possibly be reached with adaptation time as well. Where the longer the user used to get
+                  used to the app the more difficult they might deem it. With these hypothesis in mind we might be able to drastically improve the user experience of our app.
+                </p>
+                <br>
+                <p>Here's the link to the github with all the code used for the collection and illustration of the data</p>
+                <button class="adobelink"><a class="linker" href="https://github.com/TheOinge/UXUIStuff">Link to github repository</a></button>
+                <br>
+                <br>
+                <p>
+                    We received a couple comments from the users that we tested. Of those comments here are some of the notable ones.
+                    The search and map pages could use more interactive features. The search bar needs to have more linked content.
+                    Finally, the map could be zoomed out more for easier viewing. We believe that these comments were the most impactful
+                    when if came to the design and interaction with our app. The changes that would be coupled with these comments are
+                    not very hard to obtain. Only some simple tweaks are needed for the app to be more interactive and have a better user
+                    experience. 
+                </p>
+
             </div>
         </div>
+
+       
+            <pre class="language-python">
+                <code class="language-python">
+# survey.py created by Logan Trudel
+# This program is used for the collection of user data
+#   and should be run in a python supported terminal
+
+# Here is the csv file that we used,
+#       Name,FailedPages,Easiness,Time,Clicks,Errors
+#       Luke,FALSE,5,120,44,5
+#       Charlie,FALSE,10,120,44,3
+#       Zach,TRUE,8,61,37,3
+#       Anne,FALSE,4,299,86,0
+#       Mikel,FALSE,8,83,47,11
+
+import csv
+import os
+
+def survey():
+    survey_data = []
+
+    while True:
+        person_name = input("Enter the person's name (or 'done' to finish): ")
+        if person_name.lower() == 'done':
+            break
+
+        person_data = {"Name": person_name}
+
+        # Collect survey information for the current person
+        person_data["FailedPages"] = input("Were there any pages that failed to show or function? (y/n)").lower() == 'y'
+        person_data["Easiness"] = how_easy()
+        person_data["Time"] = how_long()
+        person_data["Clicks"] = how_many_clicks()
+        person_data["Errors"] = how_many_errors()
+
+        survey_data.append(person_data)
+
+    # Write data to CSV file
+    append_to_csv(survey_data)
+
+# checks if the file exists and then writes to it
+def append_to_csv(survey_data):
+    file_exists = os.path.isfile('data.csv')
+
+    with open('data.csv', mode='a', newline='') as csv_file:
+        csv_writer = csv.writer(csv_file)
+
+        # If the file doesn't exist, write the header
+        if not file_exists:
+            header = ["Name", "FailedPages", "Easiness", "Time", "Clicks", "Errors"]
+            csv_writer.writerow(header)
+
+        # Write the data per category
+        for person_data in survey_data:
+            csv_writer.writerow([
+                person_data["Name"],
+                person_data["FailedPages"],
+                person_data["Easiness"],
+                person_data["Time"],
+                person_data["Clicks"],
+                person_data["Errors"]
+            ])
+# Records the easiness for each user
+def how_easy():
+    return input("How easy was the task? 1 - 10: ")
+
+# Records how long each user took to get used to the app
+def how_long():
+    return input("How long did it take for the person to get familiar with the app? (seconds): ")
+
+# Records how many clicks the user did
+def how_many_clicks():
+    return input("How many total clicks did the user do? : ")
+
+# Records how many errors the user encountered
+def how_many_errors():
+    return input("How many errors did the user encounter? : ")
+
+def main():
+    survey()
+
+if __name__ == "__main__":
+    main()
+                    
+
+                </code>
+            </pre>
+        
+            <pre class="language-python">
+                <code class="language-python">
+# graphs.py created by Logan Trudel
+# This program generates graphs based on data in
+#   the generated data.csv file
+
+
+# Importing the necessary libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def generate_graphs():
+    # Read data from CSV file
+    df = pd.read_csv('data.csv')
+
+    # Plotting
+    plot_failed_pages(df)
+    plot_easiness(df)
+    plot_time(df)
+    plot_clicks(df)
+    plot_errors(df)
+
+    # Show all plots
+    plt.show()
+
+def plot_failed_pages(df):
+    # Plotting Failed Pages Distribution
+    plt.figure(figsize=(8, 6))
+    df['Name'].value_counts().plot(kind='bar', color=['red', 'blue'])
+    plt.title('Failed Pages Distribution')
+    plt.xlabel('Name')
+    plt.ylabel('Count')
+    plt.show()
+
+def plot_easiness(df):
+    # Plotting Easiness Distribution
+    plt.figure(figsize=(8, 6))
+    df.plot(x='Name', y='Easiness', kind='bar', color='skyblue')
+    plt.title('Easiness Distribution')
+    plt.xlabel('Name')
+    plt.ylabel('Easiness Rating')
+    plt.show()
+
+def plot_time(df):
+    # Plotting Time Distribution
+    plt.figure(figsize=(8, 6))
+    df.plot(x='Name', y='Time', kind='bar', color='orange')
+    plt.title('Time Distribution')
+    plt.xlabel('Name')
+    plt.ylabel('Time (seconds)')
+    plt.show()
+
+def plot_clicks(df):
+    # Plotting Clicks Distribution
+    plt.figure(figsize=(8, 6))
+    df.plot(x='Name', y='Clicks', kind='bar', color='purple')
+    plt.title('Clicks Distribution')
+    plt.xlabel('Name')
+    plt.ylabel('Number of Clicks')
+    plt.show()
+
+def plot_errors(df):
+    # Plotting Errors Distribution
+    plt.figure(figsize=(8, 6))
+    df.plot(x='Name', y='Errors', kind='bar', color='red')
+    plt.title('Errors Distribution')
+    plt.xlabel('Name')
+    plt.ylabel('Number of Errors')
+    plt.show()
+
+if __name__ == "__main__":
+    generate_graphs()
+
+                </code>
+            </pre>
+
+            <pre class="language-python">
+                <code class="language-python">
+# graphs_calculated.py created by Logan Trudel
+# This program generates graphs based on data in
+#   the generated data.csv file and displays means
+#   and standard deviation.
+
+
+# Importing the necessary libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def calculate_statistics(df):
+    # Calculate mean and standard deviation for each category
+    # Selecting the specified categories and calculating their mean and standard deviation
+    means = df[['Easiness', 'Time', 'Clicks', 'Errors']].mean()
+    stds = df[['Easiness', 'Time', 'Clicks', 'Errors']].std()
+
+    return means, stds
+
+def plot_statistics(means, stds):
+    # Display the calculated statistics
+    print("Category Data Statistics:")
+    print("Means:")
+    print(means)
+    print("\nStandard Deviations:")
+    print(stds)
+
+    # Plotting means with error bars (standard deviations)
+    # Creating a 2x2 grid for separate plots
+    plt.figure(figsize=(12, 12))
+
+    # Plot for Easiness
+    plt.subplot(2, 2, 1)
+    plt.bar(['Easiness'], means['Easiness'], yerr=stds['Easiness'], color='skyblue', capsize=5, width=0.5)
+    plt.title('Easiness Mean with Standard Deviation')
+    plt.ylabel('Mean Easiness')
+
+    # Plot for Time
+    plt.subplot(2, 2, 2)
+    plt.bar(['Time'], means['Time'], yerr=stds['Time'], color='orange', capsize=5, width=0.5)
+    plt.title('Time Mean with Standard Deviation')
+    plt.ylabel('Mean Time (seconds)')
+
+    # Plot for Clicks
+    plt.subplot(2, 2, 3)
+    plt.bar(['Clicks'], means['Clicks'], yerr=stds['Clicks'], color='purple', capsize=5, width=0.5)
+    plt.title('Clicks Mean with Standard Deviation')
+    plt.ylabel('Mean Clicks')
+
+    # Plot for Errors
+    plt.subplot(2, 2, 4)
+    plt.bar(['Errors'], means['Errors'], yerr=stds['Errors'], color='red', capsize=5, width=0.5)
+    plt.title('Errors Mean with Standard Deviation')
+    plt.ylabel('Mean Errors')
+
+    # Adjust layout for better visualization
+    plt.tight_layout()
+    # Display the plots
+    plt.show()
+
+if __name__ == "__main__":
+    # Read data from CSV file
+    df = pd.read_csv('data.csv')
+
+    # Calculate statistics
+    means, stds = calculate_statistics(df)
+
+    # Plot and display statistics
+    plot_statistics(means, stds)
+
+                </code>
+            </pre>
+
+
+
+            <div class="map-text">
+                <div class="conclusion">
+                    <h2 class="conclusion-head">Findings: </h2>
+                    <p>
+                        From the Data collected in the survey easiness scored an average of 7 meaning we are on the right track when it comes to building an easy to navigate application. 
+                        The average time for the users to become familiar with the application was just over 2 minutes meaning the app has a relatively fast learning process,
+                         The average amount of clicks for the users exploring the entire app is over 50 clicks, and the average amount Errors being around 5, meaning there is 
+                         improvements to be made with some navigation features such as the map and search pages.
+                    </p>
+                    <br>
+                    <h2 class="conclusion-head">Recommendations: </h2>
+                    <p>From the comments that were collected post-interview, The recommended improvements were targeted towards the map and search features, with the user wanting to see more features involved in those parts of the app.
+                         Suggestions from other fellow graphical UX designers were that the search page and Deals page could use a rework on their layout with buttons and content.
+                          The icons on the deals page should redesigned to represent the style guide more closely.</p>
+                </div>
+            </div>
         
 
-
-
     </div>
-    
+
+    <script src="../javascript/prism.js"></script>
+
+
 </body>
 </html>

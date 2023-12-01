@@ -214,3 +214,8 @@ p {
     max-height: 100%;
     margin: auto; /* This will center the image horizontally */
 }
+
+pre.language-python {
+    border-radius: 5px !important;
+    width: 80%;
+}
