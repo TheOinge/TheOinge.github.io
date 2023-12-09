@@ -219,3 +219,13 @@ pre.language-python {
     border-radius: 5px !important;
     width: 80%;
 }
+
+
+.space{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    height: 300px;
+    align-items: center;
+}
