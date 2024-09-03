@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-color: rgb(71, 71, 71);
+    background-color: rgb(57, 57, 57);
 }
 
 header {
@@ -43,15 +43,15 @@ header {
     width: 90%;
     height: 40%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    background-color: #007564;
-    border-radius: 50px;
+    background-color: #000000;
+    border-radius: 25px;
     
 }
 
 .map-text {
     margin-bottom: 20px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     vertical-align: middle;
     display: flex;
     flex-wrap: wrap;
@@ -59,8 +59,8 @@ header {
     width: 70%;
     height: 40%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    background-color: #007564;
-    border-radius: 50px;
+    background-color: #000000;
+    border-radius: 25px;
 
 }
 
